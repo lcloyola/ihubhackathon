@@ -10,7 +10,7 @@ Etracker::Application.routes.draw do
 
   resources :items
 
-  devise_for :users
+  devise_for :users, :class_name => 'User', :controllers => { :omniauth_callbacks => 'omniauth_callbacks'}
 
   root :to => 'home#index'
 
