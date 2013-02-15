@@ -3,7 +3,7 @@ class UnitsController < ApplicationController
   # GET /units.json
   def index
     @unit = Unit.new
-    @units = Unit.all
+    @units = Unit.find(:all, conditions: ["user_id != ?", ""])
 
     respond_to do |format|
       format.html # index.html.erb

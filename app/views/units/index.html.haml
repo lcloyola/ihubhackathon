@@ -28,10 +28,10 @@
       %td= unit.model
       %td= unit.condition
       %td= unit.is_active
-      %td= unit.user
-      %td= unit.location
-      %td= unit.barcode
-      %td= unit.avatar
+      %td= unit.user.email
+      %td= unit.location.name
+      %td= image_tag unit.barcode
+      %td= image_tag unit.avatar
       %td= link_to 'Show', unit
       %td= link_to 'Edit', edit_unit_path(unit)
       %td= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' }
